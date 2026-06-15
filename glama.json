@@ -1,0 +1,19 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": [
+    "kloizd"
+  ],
+  "name": "Assay Truth Graph MCP",
+  "description": "Remote MCP server that grounds GTM agents in governed, cited company truth.",
+  "type": "mcp_server",
+  "transport": [
+    "streamable-http"
+  ],
+  "keywords": [
+    "mcp",
+    "truth-graph",
+    "gtm",
+    "sales-enablement",
+    "governance"
+  ]
+}
