@@ -58,6 +58,9 @@ Server config:
 | ChatGPT Apps Directory | Manual Apps SDK review required | OpenAI Apps SDK review is the public path for ChatGPT Apps Directory distribution. Requires dashboard app draft, business verification, testing, and review submission. |
 | Codex Plugin Directory | Prepared / review path is OpenAI Apps SDK | Added repo marketplace metadata in `.agents/plugins/marketplace.json` and `plugins/assay-truth-graph`. OpenAI docs say approved Apps SDK apps create Codex plugin distribution. |
 | Replit | Install link added; curated listing route not found | Added one-click Replit install badge/link. Computer Use verified the link lands at Replit login with the MCP payload preserved. |
+| Developers Digest MCP Directory | Manual / GitHub repo blocked | Submit page is https://mcp.developersdigest.tech/submit, but the linked GitHub repository returned 404 from this environment. |
+| Etropo Marketing MCP Directory | Manual browser submission | Marketing-specific MCP directory with a submit path at https://www.etropo.com/marketing-mcps. Needs browser form submission. |
+| MCP Server Finder | Discovery monitored | Directory exists at https://www.mcpserverfinder.com/. No reliable submit form found; GitHub topics were added to improve crawler discovery. |
 | Antigravity | No public listing route found | Official site/docs pass shows MCP/plugin customization support, but no self-serve marketplace submission found. Use generic MCP config and partner outreach. |
 | Emergent | No public MCP listing route found | No reliable public self-serve MCP directory submission route verified. Use partner/support outreach with the listing packet. |
 | Windsurf / VS Code / similar clients | Install docs only | No public MCP directory submission route verified in this pass; use generic MCP config and public repo. |

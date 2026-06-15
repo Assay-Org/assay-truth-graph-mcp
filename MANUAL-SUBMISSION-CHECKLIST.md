@@ -117,6 +117,26 @@ npx -y smithery@latest mcp publish \
 4. Do not approve paid review or paid promotion without an explicit budget.
 5. Submit and save the confirmation URL or email.
 
+## Developers Digest MCP Directory
+
+1. Open https://mcp.developersdigest.tech/submit.
+2. Search for Assay first to avoid duplicates.
+3. Follow the GitHub issue link from the submit page.
+4. Paste the listing packet above into the issue template.
+5. Submit the issue and save the issue URL.
+
+The submit page is public, but the GitHub repository link returned 404 from this
+environment during the June 15, 2026 pass, so this remains manual.
+
+## Etropo Marketing MCP Directory
+
+1. Open https://www.etropo.com/marketing-mcps.
+2. Use the "Submit Marketing MCP" control.
+3. Paste the listing packet above.
+4. Emphasize the GTM, positioning, content governance, and sales enablement use
+   cases.
+5. Submit and save the confirmation URL or email.
+
 ## Antigravity, Emergent, Windsurf, VS Code, and Similar Clients
 
 No public self-serve MCP directory submission route was verified for these
