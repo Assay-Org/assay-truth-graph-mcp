@@ -38,6 +38,18 @@ Generic MCP config:
 OAuth opens in the browser on first use for interactive clients. Headless agents
 can authenticate with an org API key from Assay Settings.
 
+Replit one-click install:
+
+[![Install in Replit](https://replit.com/badge?caption=Install%20in%20Replit)](https://replit.com/integrations?mcp=eyJkaXNwbGF5TmFtZSI6IkFzc2F5IFRydXRoIEdyYXBoIE1DUCIsImJhc2VVcmwiOiJodHRwczovL2FwcC5hc3NheS53aWtpL2FwaS9tY3AvdjIvbWNwIn0)
+
+Codex repo marketplace:
+
+```bash
+codex plugin marketplace add Assay-Org/assay-truth-graph-mcp
+```
+
+Then install the `Assay Truth Graph` plugin from Codex Plugins.
+
 ## What Agents Can Do
 
 - Get verified GTM context for customer-facing drafts.
@@ -55,6 +67,8 @@ can authenticate with an org API key from Assay Settings.
 - Trust center: https://assay.wiki/trust/
 - Privacy: https://assay.wiki/legal/privacy/
 - Settings: https://app.assay.wiki/settings
+- Manual listing checklist: ./MANUAL-SUBMISSION-CHECKLIST.md
+- Directory tracker: ./DIRECTORY-SUBMISSIONS.md
 
 ## Directory Copy
 
@@ -71,4 +85,3 @@ MCP, Model Context Protocol, remote MCP server, GTM, go-to-market, positioning,
 sales enablement, content governance, AI governance, compliance, truth graph,
 provenance, Claude, ChatGPT, Cursor
 ```
-

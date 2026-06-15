@@ -1,0 +1,20 @@
+{
+  "name": "assay",
+  "interface": {
+    "displayName": "Assay"
+  },
+  "plugins": [
+    {
+      "name": "assay-truth-graph",
+      "source": {
+        "source": "local",
+        "path": "./plugins/assay-truth-graph"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Sales"
+    }
+  ]
+}

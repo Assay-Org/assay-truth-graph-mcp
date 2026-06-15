@@ -1,0 +1,40 @@
+{
+  "name": "assay-truth-graph",
+  "version": "0.1.0",
+  "description": "Ground Codex agents in Assay's governed GTM Truth Graph.",
+  "author": {
+    "name": "Assay",
+    "email": "hello@assay.wiki",
+    "url": "https://assay.wiki"
+  },
+  "homepage": "https://assay.wiki/mcp/",
+  "repository": "https://github.com/Assay-Org/assay-truth-graph-mcp",
+  "license": "Proprietary",
+  "keywords": [
+    "mcp",
+    "truth-graph",
+    "gtm",
+    "sales-enablement",
+    "governance"
+  ],
+  "interface": {
+    "displayName": "Assay Truth Graph",
+    "shortDescription": "Ground GTM work in governed company truth.",
+    "longDescription": "Assay Truth Graph connects Codex to governed company truth with citations, provenance, review workflows, and content validation for GTM, sales, content, and support workflows.",
+    "developerName": "Assay",
+    "category": "Productivity",
+    "capabilities": [
+      "MCP"
+    ],
+    "websiteURL": "https://assay.wiki/mcp/",
+    "privacyPolicyURL": "https://assay.wiki/legal/privacy/",
+    "termsOfServiceURL": "https://assay.wiki/legal/terms/",
+    "brandColor": "#1F2937",
+    "defaultPrompt": [
+      "Search our verified GTM truth for this claim.",
+      "Validate this customer-facing draft with Assay.",
+      "Get grounded context for a sales follow-up."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
