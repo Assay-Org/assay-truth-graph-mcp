@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.assay-org/assay-truth-graph",
+  "title": "Assay Truth Graph MCP",
+  "description": "Ground GTM agents in governed, cited company truth.",
+  "version": "0.1.0",
+  "websiteUrl": "https://assay.wiki/mcp/",
+  "repository": {
+    "url": "https://github.com/Assay-Org/assay-truth-graph-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://assay.wiki/assay-brand-assets/png/assay-icon-dark-256x256.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "256x256"
+      ],
+      "theme": "light"
+    },
+    {
+      "src": "https://assay.wiki/assay-brand-assets/png/assay-icon-light-256x256.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "256x256"
+      ],
+      "theme": "dark"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.assay.wiki/api/mcp/v2/mcp"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "assay",
+  "description": "Assay - governed GTM truth in Claude Code. Grounds drafts in verified company facts, checks content before it ships, and keeps truth changes human-approved.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Assay",
+    "url": "https://assay.wiki"
+  }
+}
