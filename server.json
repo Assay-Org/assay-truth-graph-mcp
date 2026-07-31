@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Assay-Org/assay-truth-graph",
   "title": "Assay Truth Graph MCP",
-  "description": "Ground GTM agents in governed, cited company truth.",
-  "version": "0.1.0",
+  "description": "Ranked, governed, cited GTM context for your agents, on one living source of truth.",
+  "version": "0.1.1",
   "websiteUrl": "https://assay.wiki/mcp/",
   "repository": {
     "url": "https://github.com/Assay-Org/assay-truth-graph-mcp",

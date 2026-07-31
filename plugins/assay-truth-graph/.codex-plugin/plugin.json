@@ -1,7 +1,7 @@
 {
   "name": "assay-truth-graph",
   "version": "0.1.0",
-  "description": "Ground Codex agents in Assay's governed GTM Truth Graph.",
+  "description": "Ranked, governed, cited GTM context for your agents, on one living source of truth.",
   "author": {
     "name": "Assay",
     "email": "hello@assay.wiki",
@@ -19,21 +19,21 @@
   ],
   "interface": {
     "displayName": "Assay Truth Graph",
-    "shortDescription": "Ground GTM work in governed company truth.",
-    "longDescription": "Assay Truth Graph connects Codex to governed company truth with citations, provenance, review workflows, and content validation for GTM, sales, content, and support workflows.",
+    "shortDescription": "Ground your agents in governed company truth.",
+    "longDescription": "Most MCPs are a vector search with a logo. Ours is a context engine. Assay keeps one living source of truth current, sourced, and approved, and this plugin hands that truth to Codex: ranked, cited facts shaped for the caller, provenance on every claim, confidentiality enforced server-side. Then your agents do the work, not just the lookup, with full parity to the Assay app: collateral, AI-search and GEO briefs, readiness sims, pre-call briefs, and governed writes back into the graph. Writes are dry-run by default and mint a single-use plan token that has to be confirmed. Pricing, policy, proof, and identity stay off limits to autonomous mutation. Change a fact once and every page, deck, and agent that referenced it updates inside 48 hours.",
     "developerName": "Assay",
-    "category": "Productivity",
+    "category": "Marketing",
     "capabilities": [
       "MCP"
     ],
     "websiteURL": "https://assay.wiki/mcp/",
     "privacyPolicyURL": "https://assay.wiki/legal/privacy/",
     "termsOfServiceURL": "https://assay.wiki/legal/terms/",
-    "brandColor": "#1F2937",
+    "brandColor": "#630ED4",
     "defaultPrompt": [
-      "Search our verified GTM truth for this claim.",
-      "Validate this customer-facing draft with Assay.",
-      "Get grounded context for a sales follow-up."
+      "What's our current approved positioning?",
+      "Check this draft against our approved claims.",
+      "Draft this from our approved truth and show me the sources."
     ]
   },
   "mcpServers": "./.mcp.json"

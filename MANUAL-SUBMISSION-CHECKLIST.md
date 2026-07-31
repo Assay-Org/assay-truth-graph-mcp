@@ -7,8 +7,11 @@ creation, CAPTCHA/checkpoint, or a final form submission from an Assay account.
 
 Name: Assay Truth Graph MCP
 
-Short description: Remote MCP server that grounds GTM agents in governed, cited
-company truth.
+Short description (standard field): Ranked, governed, cited GTM context for your
+agents, on one living source of truth.
+
+Short description (hard short limits, 47 chars): Governed, cited GTM context for
+your AI agents.
 
 Endpoint: https://app.assay.wiki/api/mcp/v2/mcp
 
@@ -26,8 +29,8 @@ Support email: hello@assay.wiki
 
 Logo URL: https://assay.wiki/assay-brand-assets/png/assay-icon-dark-256x256.png
 
-Suggested categories: GTM, sales enablement, knowledge, memory, governance,
-content governance, AI governance.
+Suggested categories: marketing, GTM, sales, content, SEO, brand, positioning,
+sales enablement, knowledge, governance, content governance, AI governance.
 
 ## Claude Connectors Directory
 

@@ -4,7 +4,7 @@
     "kloizd"
   ],
   "name": "Assay Truth Graph MCP",
-  "description": "Remote MCP server that grounds GTM agents in governed, cited company truth.",
+  "description": "Ranked, governed, cited GTM context for your agents, on one living source of truth.",
   "type": "mcp_server",
   "transport": [
     "streamable-http"
@@ -13,7 +13,14 @@
     "mcp",
     "truth-graph",
     "gtm",
+    "marketing",
+    "sales",
+    "content",
+    "seo",
+    "brand",
+    "positioning",
     "sales-enablement",
-    "governance"
+    "governance",
+    "knowledge-graph"
   ]
 }

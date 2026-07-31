@@ -5,8 +5,14 @@ to work from governed, cited company truth.
 
 Assay turns positioning, proof points, brand voice, personas, collateral
 context, and validation rules into a governed Truth Graph. The remote MCP server
-lets Claude, ChatGPT, Cursor, Claude Code, Codex, and other MCP clients use that
-context without copying company facts into each agent.
+hands that context to Claude, ChatGPT, Cursor, Claude Code, Codex, and other MCP
+clients without copying company facts into each agent.
+
+The server has full parity with the Assay app. What the team does in the
+product, your agents can do here: 48 registered tools spanning Truth Graph
+search and governed mutation, content validation, collateral, AI search and
+GEO, readiness simulation, pre-call briefs, and review and promotion. Call
+`tools/list` on the live endpoint for the current surface.
 
 ## Connect
 
@@ -58,7 +64,17 @@ Then install the `Assay Truth Graph` plugin from Codex Plugins.
 - Create or update Truth Graph records through dry-run and human-approved
   plan-token workflows.
 - Generate grounded collateral drafts in quarantine, with preview and export
-  gates.
+  gates, and re-render them when the underlying story changes.
+- Run the AI search and GEO workspace: briefs, artifacts, evidence, goals,
+  hosted sites, and approval-gated publishing.
+- Run readiness simulations and build pre-call briefs.
+- Review, approve, and promote through the same gates the app uses.
+
+Two entitlement lanes are enforced server-side. `mcp_access` covers read and
+verification tools on Free and above. `mcp_control_access` covers write and run
+tools on Scale and above. Writes are dry-run by default and mint a single-use,
+expiring plan token that must be confirmed. Pricing, policy, proof, and identity
+kinds are refused for autonomous mutation, and unmapped kinds fail closed.
 
 ## Links
 
@@ -72,16 +88,29 @@ Then install the `Assay Truth Graph` plugin from Codex Plugins.
 
 ## Directory Copy
 
-Short description:
+Short description (standard field):
 
 ```text
-Remote MCP server that grounds GTM agents in governed, cited company truth.
+Ranked, governed, cited GTM context for your agents, on one living source of truth.
+```
+
+Short description (hard short limits, 47 chars):
+
+```text
+Governed, cited GTM context for your AI agents.
+```
+
+Company one-liner (about-the-company slots):
+
+```text
+Elite AI GTM team on one living source of truth.
 ```
 
 Tags:
 
 ```text
-MCP, Model Context Protocol, remote MCP server, GTM, go-to-market, positioning,
-sales enablement, content governance, AI governance, compliance, truth graph,
-provenance, Claude, ChatGPT, Cursor
+MCP, Model Context Protocol, remote MCP server, GTM, go-to-market, marketing,
+sales, content, SEO, brand, positioning, messaging, sales enablement,
+content governance, AI governance, compliance, truth graph, provenance,
+knowledge graph, Claude, ChatGPT, Cursor
 ```
