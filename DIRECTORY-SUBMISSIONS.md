@@ -10,8 +10,11 @@ https://github.com/Assay-Org/assay-truth-graph-mcp
 
 Name: Assay Truth Graph MCP
 
-Short description: Remote MCP server that grounds GTM agents in governed, cited
-company truth.
+Short description (standard field): Ranked, governed, cited GTM context for your
+agents, on one living source of truth.
+
+Short description (hard short limits, 47 chars): Governed, cited GTM context for
+your AI agents.
 
 Homepage: https://assay.wiki/
 
@@ -42,15 +45,15 @@ Server config:
 
 | Store | Status | Notes |
 |---|---|---|
-| Official MCP Registry | Published / active | GitHub Actions OIDC publish succeeded: https://github.com/Assay-Org/assay-truth-graph-mcp/actions/runs/27537383906. Registry search returns `io.github.Assay-Org/assay-truth-graph` with status `active`. |
-| MCP.Directory | Submitted | API response: `{"ok":true,"message":"Server submitted for review!"}`. |
-| mcpservers.org / Awesome MCP Servers | Submitted | Free submission accepted with pending listing id `3344`. |
-| punkpeye/awesome-mcp-servers | PR opened | https://github.com/punkpeye/awesome-mcp-servers/pull/8098 |
-| Glama MCP | Prepared for ingestion | Added `glama.json` to the public repo and verified Glama search is not showing the Assay listing yet. Glama appears to ingest official registry/GitHub sources asynchronously. |
-| mcp.so | Issue submitted | https://github.com/chatmcp/mcpso/issues/2817 |
-| Smithery | Blocked on API key | `npx smithery@latest mcp publish ...` prompts for a Smithery API key from https://smithery.ai/account/api-keys. |
+| Official MCP Registry | Content updated 2026-07-31, republish pending | `server.json` v0.1.1 pushed to `main` (commit `d3568af`) and tag `v0.1.1` pushed. The repo's own OIDC auto-publish workflow (`publish-mcp.yml`) triggered on the tag push but failed immediately: **"your account is locked due to a billing issue"** on the GitHub org — a pre-existing, unrelated Actions billing problem (see project memory `ci-actions-minutes-exhausted-2026-06-07`), not a content or workflow defect. Worked around by running `mcp-publisher login github` directly (device-code flow) to publish without Actions. |
+| MCP.Directory | Submitted (June) | API response: `{"ok":true,"message":"Server submitted for review!"}`. Not re-verified this session; description there is presumably still the pre-2026-07-31 copy. |
+| mcpservers.org / Awesome MCP Servers | Already submitted (June), listing id `3344` — **do not resubmit** | Free submission accepted in June. Resubmitting risks a duplicate/spam listing. The live listing almost certainly still shows the old description; updating it requires owning/editing the existing listing (likely needs the submitter's login or an edit-request), not a fresh submission. Owed: a manual edit pass once ownership/edit access is confirmed. |
+| punkpeye/awesome-mcp-servers | **PR #8098 CLOSED, not merged** (verified 2026-07-31) | Closed 2026-07 for inactivity: the reviewer bot requires a Glama quality-score badge in the PR before merge, and the Glama score was never obtained (see Glama row below — it's stuck at "not tested"). Do not reopen or file a new PR until the Glama listing is claimed and actually scored; the badge is a hard requirement, not optional. |
+| Glama MCP | **Live and indexed, but unclaimed** (verified 2026-07-31 via live page load) | `https://glama.ai/mcp/servers/@Assay-Org/assay-truth-graph-mcp` is real and shows the "Official" tag, but: (1) description is stale (pre-2026-07-31 copy — Glama re-crawls asynchronously, no action needed for that specific gap, it should update on its own crawl cadence now that `glama.json` + README are pushed); (2) **quality score shows "not tested"** rather than any letter grade, most likely because Glama's automated crawler can't get past the OAuth wall to introspect tools — this is what's blocking the punkpeye PR above; (3) **license shows "F, not found"** — the repo has no LICENSE file, which is hurting the score and is likely required for several other directories too; (4) **listing is unclaimed** ("claim this server to access the admin panel") — claiming needs the founder's own GitHub-authenticated browser session, not something completable from this sandboxed session. **Two founder actions needed:** claim the listing at the URL above (GitHub sign-in), and decide a license for this repo (it's a thin manifest/config wrapper, not proprietary source — MIT or Apache-2.0 would be typical, but licensing is a real decision, not mine to make unilaterally). |
+| mcp.so | Issue submitted (June) | https://github.com/chatmcp/mcpso/issues/2817 — not re-checked this session. |
+| Smithery | Blocked on API key / account | `npx smithery@latest mcp publish ...` prompts for a Smithery API key from https://smithery.ai/account/api-keys. No `smithery` CLI installed locally as of 2026-07-31 either. Needs the founder to create/access a Smithery account. |
 | Cline MCP Marketplace | Ready, not submitted | Issue template requires confirming Cline setup was tested from README/llms-install. Do this after a real Cline install test, then submit to https://github.com/cline/mcp-marketplace/issues/new/choose. |
-| Cursor Directory | Blocked on sign-in | Submit page requires interactive account auth; public package metadata is ready. |
+| Cursor Directory | Blocked on sign-in — **confirmed live 2026-07-31** | Verified by loading https://cursor.directory directly: nav bar has a "Submit a plugin" button gated behind "Sign In" (GitHub OAuth), no PR-to-repo submission path found on the live site. ⚠ Correction: an earlier research pass in this project (2026-07-31 marketplace-submissions run) concluded this was a GitHub PR to `leerob/directories` — that was wrong / stale; do not act on it. The sign-in-gated flow above, matching this row's original June finding, is what's actually live. Needs the founder's own Cursor Directory account. |
 | MCP Market | Blocked on browser checkpoint / paid review check | Submit page is behind Vercel Security Checkpoint from this environment; do not authorize paid review without human approval. |
 | PulseMCP | Awaiting crawl / blocked by Cloudflare submit page | Official registry publication should make Assay eligible for discovery; direct submit page was Cloudflare-blocked from CLI. |
 | Claude Code plugin ecosystem | Ready after public repo exists | `.claude-plugin/plugin.json` and `.mcp.json` are included. |
