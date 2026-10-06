@@ -87,3 +87,19 @@ the README's front-door section in the same release that ships it.
 | Antigravity | No public listing route found | Official site/docs pass shows MCP/plugin customization support, but no self-serve marketplace submission found. Use generic MCP config and partner outreach. |
 | Emergent | No public MCP listing route found | No reliable public self-serve MCP directory submission route verified. Use partner/support outreach with the listing packet. |
 | Windsurf / VS Code / similar clients | Install docs only | No public MCP directory submission route verified in this pass; use generic MCP config and public repo. |
+
+## 2026-10-07 pass
+
+| Store | Status |
+|---|---|
+| Official MCP Registry | v0.1.2 metadata pushed (icons fixed, MIT). **Publish pending founder device login** (`mcp-publisher login github`). Registry still serves v0.1.0. |
+| PulseMCP | Listed (auto-ingested, "Official"): https://www.pulsemcp.com/servers/assay |
+| Glama | Listed twice, unclaimed; needs founder claim + reviewer credentials. LICENSE now present. |
+| punkpeye/awesome-remote-mcp-servers | PR https://github.com/punkpeye/awesome-remote-mcp-servers/pull/1293 (Marketing). The old awesome-mcp-servers list no longer takes remote-only servers. |
+| Kilo Code Marketplace | PR https://github.com/Kilo-Org/kilo-marketplace/pull/333 |
+| Docker MCP Catalog | PR https://github.com/docker/mcp-registry/pull/5490; test credentials form pending reviewer account |
+| Claude Connectors + plugin directory | Portal is now https://claude.ai/directory/manage (any paid plan). Founder submission; see MANUAL-SUBMISSION-CHECKLIST.md. PRM `resource` fixed to the exact MCP URL (cki #1163). |
+| OpenAI plugin directory (ChatGPT + Codex) | Founder submission; domain-challenge route ships in cki #1163. |
+| Cursor Marketplace / cursor.directory | `.cursor-plugin/plugin.json` + LICENSE added; founder login to submit. |
+| MCP.Directory, MCP Market, mcp.so | Free web forms, founder to submit (form submission from the agent was blocked). |
+| Smithery | Founder account needed. |

@@ -1,147 +1,88 @@
-# Manual Submission Checklist
+# Manual submission checklist (updated 2026-10-07)
 
-Use this checklist for listing paths that require a human owner login, API key
-creation, CAPTCHA/checkpoint, or a final form submission from an Assay account.
+These steps need a founder login or a founder-only action. Everything that could be done from the CLI is
+already done (see DIRECTORY-SUBMISSIONS.md). Paste the values exactly as written.
 
-## Listing Packet
+## Shared values
 
-Name: Assay Truth Graph MCP
+| Field | Value |
+|---|---|
+| Name | Assay |
+| Server URL | `https://app.assay.wiki/api/mcp/v2/mcp` |
+| One-liner (≤ 200) | Ranked, governed, cited GTM context for your agents, on one living source of truth. |
+| Short (≤ 30, OpenAI) | Governed, cited GTM context |
+| Long description | The "What Agents Can Do" section of README.md plus its governance paragraph |
+| Docs | https://assay.wiki/mcp/ |
+| Privacy | https://assay.wiki/legal/privacy/ |
+| Terms | https://assay.wiki/legal/terms/ |
+| Support | support@assay.wiki |
+| Icon | `assets/assay-icon-512.png` (dark: `assets/assay-icon-512-on-dark.png`) |
+| Repo (MIT) | https://github.com/Assay-Org/assay-truth-graph-mcp |
+| Auth | OAuth 2.1 + PKCE S256, Dynamic Client Registration at `https://clerk.assay.wiki/oauth/register` |
+| Categories | Marketing, Sales |
 
-Short description (standard field): Ranked, governed, cited GTM context for your
-agents, on one living source of truth.
+## 0. Prerequisite: a reviewer test account (blocks Claude, OpenAI, Docker, Glama, Smithery)
 
-Short description (hard short limits, 47 chars): Governed, cited GTM context for
-your AI agents.
+- A dedicated seat (e.g. a reviewer@ address) in a workspace on Scale or above, so write tools work.
+- Truth Graph populated with sample facts (run onboarding on a demo domain, approve a handful of facts).
+- No MFA, codes or magic links (OpenAI rejects those). Password sign-in only.
+- Credentials go only into each portal's private reviewer field. Never into a public repo or PR.
 
-Endpoint: https://app.assay.wiki/api/mcp/v2/mcp
+## 1. Official MCP Registry (v0.1.0 → v0.1.2)
 
-Docs: https://assay.wiki/mcp/
-
-Repo: https://github.com/Assay-Org/assay-truth-graph-mcp
-
-Company site: https://assay.wiki/
-
-Privacy policy: https://assay.wiki/legal/privacy/
-
-Terms: https://assay.wiki/legal/terms/
-
-Support email: hello@assay.wiki
-
-Logo URL: https://assay.wiki/assay-brand-assets/png/assay-icon-dark-256x256.png
-
-Suggested categories: marketing, GTM, sales, content, SEO, brand, positioning,
-sales enablement, knowledge, governance, content governance, AI governance.
-
-## Claude Connectors Directory
-
-1. Sign in to Claude with a Team or Enterprise workspace owner account.
-2. Open https://claude.ai/new?admin=mcp-directory.
-3. Choose remote MCP server / connector submission.
-4. Enter the listing packet above.
-5. Set authentication to OAuth for interactive users.
-6. Provide test credentials or a demo workspace with sample Truth Graph data.
-7. Confirm the server has been tested in Claude or MCP Inspector.
-8. Submit for review and watch the account email for review follow-up.
-
-## ChatGPT Apps Directory and Codex Plugin Directory
-
-OpenAI currently uses the Apps SDK review path for both ChatGPT app listing and
-Codex plugin directory distribution.
-
-1. Sign in to https://platform.openai.com with an Assay organization owner or a
-   user with app write permissions.
-2. Complete business verification in the organization settings for the Assay
-   publisher name.
-3. Create an Apps SDK app draft in https://platform.openai.com/apps-manage.
-4. Connect the production MCP server at
-   `https://app.assay.wiki/api/mcp/v2/mcp`.
-5. Add app metadata, tool descriptions, privacy policy, terms, support contact,
-   icon, and any required ChatGPT UI component metadata.
-6. Test the app in ChatGPT developer mode with direct, indirect, and negative
-   prompts.
-7. Provide a fully featured demo account with sample data if the review form
-   requests one.
-8. Submit the app for review. If approved, OpenAI creates the corresponding
-   Codex plugin directory distribution.
-
-Repo-side Codex support is already included here through `.agents/plugins` and
-`plugins/assay-truth-graph`; users can add this repo as a Codex plugin
-marketplace while the public review flow is pending.
-
-## Replit
-
-1. Open the install link:
-   https://replit.com/integrations?mcp=eyJkaXNwbGF5TmFtZSI6IkFzc2F5IFRydXRoIEdyYXBoIE1DUCIsImJhc2VVcmwiOiJodHRwczovL2FwcC5hc3NheS53aWtpL2FwaS9tY3AvdjIvbWNwIn0
-2. Sign in to Replit.
-3. Continue through the integration prompt.
-4. Authorize Assay Truth Graph MCP for the target Replit workspace/project.
-5. Verify Replit Agent can see and call the Assay MCP tools.
-
-Replit's public docs expose one-click install links and a curated MCP list, but
-no public self-serve form for curated list submission was found in this pass.
-
-## Smithery
-
-1. Sign in to https://smithery.ai.
-2. Open https://smithery.ai/account/api-keys.
-3. Create a short-lived API key.
-4. Provide the key to the publishing shell when ready.
-5. Run:
+GitHub Actions is billing-locked, so publish from a terminal:
 
 ```bash
-npx -y smithery@latest mcp publish \
-  "https://app.assay.wiki/api/mcp/v2/mcp" \
-  -n "Assay-Org/assay-truth-graph" \
-  --json
+cd Assay-Platform/integrations/assay-truth-graph-mcp
+mcp-publisher login github
+mcp-publisher publish
 ```
 
-## Cursor
+Approve the device code in the browser as kloizd (Assay-Org membership must be public). PulseMCP, Glama's
+connector page and MCP.Directory refresh from the registry.
 
-1. Sign in to Cursor.
-2. Open the Cursor MCP/directory submission flow.
-3. Paste the listing packet above.
-4. Use the generic MCP config from `README.md`.
-5. Submit from the signed-in account.
+## 2. Glama (free)
 
-## Cline MCP Marketplace
+1. Sign in with GitHub as kloizd and claim https://glama.ai/mcp/servers/Assay-Org/assay-truth-graph-mcp
+2. In Admin, add the reviewer credentials so the health check and tool-quality score can run. The connector page
+   (https://glama.ai/mcp/connectors/io.github.Assay-Org/assay-truth-graph) shows "unhealthy" until then, and its
+   badge is what the awesome-remote-mcp-servers PR displays.
 
-1. Install Cline and add Assay using the generic MCP config from `README.md`.
-2. Verify Cline can connect and list the server tools.
-3. Open https://github.com/cline/mcp-marketplace/issues/new/choose.
-4. Choose the MCP server submission template.
-5. Fill in the listing packet and confirm the install test was completed.
-6. Submit the issue.
+## 3. Free web forms (no account needed)
 
-## MCP Market and PulseMCP
+- MCP.Directory: https://mcp.directory/submit — repo URL, one-liner, support email. Submit.
+- MCP Market: https://mcpmarket.com/submit — repo URL, free queue (4-6 weeks). Don't pick the $29 option.
+- mcp.so: https://mcp.so/submit — type Remote Server, repo URL, name Assay. Free queue.
+- mcpservers.org: already listed (id 3344). Don't resubmit.
 
-1. Open the marketplace submit page in a logged-in browser.
-2. Complete any browser checkpoint or CAPTCHA yourself.
-3. Paste the listing packet above.
-4. Do not approve paid review or paid promotion without an explicit budget.
-5. Submit and save the confirmation URL or email.
+## 4. Claude Connectors Directory + Claude plugin directory
 
-## Developers Digest MCP Directory
+Portal: https://claude.ai/directory/manage (any paid claude.ai plan; the listing belongs to the org you submit from).
 
-1. Open https://mcp.developersdigest.tech/submit.
-2. Search for Assay first to avoid duplicates.
-3. Follow the GitHub issue link from the submit page.
-4. Paste the listing packet above into the issue template.
-5. Submit the issue and save the issue URL.
+- **MCP connector**: Connection = universal URL above. Tools sync from the server (all carry titles and
+  read-only/destructive hints). Listing fields from the table. Authentication = `oauth_dcr`. Test & launch = reviewer
+  account instructions. Review the 7 compliance acknowledgments yourself.
+- **Plugin bundle**: same portal, Submit new → Plugin bundle → this repo, root folder (`.claude-plugin/plugin.json`).
+  Connect GitHub with push access to the repo.
+- Before submitting, ship the read/write split of the 5 tools still recorded as mixed in
+  `apps/webapp/src/lib/mcp/contracts/host-surface-contract.test.ts` (`outbox`, `play_control`, `sending_setup`,
+  `setup_workspace`, `content_ideas`), or set `MCP_DIRECTORY_SURFACE=1` once it hides them. Anthropic's review
+  rejects tools that mix safe and unsafe actions.
 
-The submit page is public, but the GitHub repository link returned 404 from this
-environment during the June 15, 2026 pass, so this remains manual.
+## 5. OpenAI plugin directory (ChatGPT + Codex, one listing)
 
-## Etropo Marketing MCP Directory
+Portal: https://platform.openai.com/plugins (org Owner, after individual or business verification in org settings).
 
-1. Open https://www.etropo.com/marketing-mcps.
-2. Use the "Submit Marketing MCP" control.
-3. Paste the listing packet above.
-4. Emphasize the GTM, positioning, content governance, and sales enablement use
-   cases.
-5. Submit and save the confirmation URL or email.
+- Display name **Assay** (names with "MCP", "Plugin" or "Server" are rejected). Short description from the table.
+- Domain verification: copy the challenge token into Railway env `OPENAI_APPS_CHALLENGE_TOKEN`; the app serves it
+  at `https://app.assay.wiki/.well-known/openai-apps-challenge` (route ships with cki PR #1163).
+- Review packet: 5 positive + 3 negative test cases, a demo video URL, the reviewer account, release notes.
+- Upload the ZIP built from `plugins/assay-truth-graph/`.
 
-## Antigravity, Emergent, Windsurf, VS Code, and Similar Clients
+## 6. Other logins
 
-No public self-serve MCP directory submission route was verified for these
-surfaces during the June 15, 2026 pass. For now, use the generic MCP config from
-`README.md` and pursue partner/support outreach with the listing packet above.
+- Smithery: https://smithery.ai/new — paste the server URL, then sign in to Assay when its scanner asks.
+- Cursor Marketplace: https://cursor.com/marketplace/publish — this repo (`.cursor-plugin/plugin.json` + `mcp.json`).
+- cursor.directory: sign in with GitHub → Submit a plugin → repo URL.
+- Docker MCP Catalog: PR https://github.com/docker/mcp-registry/pull/5490 is open; send the reviewer account through
+  https://forms.gle/6Lw3nsvu2d6nFg8e6
