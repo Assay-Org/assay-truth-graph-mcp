@@ -1,5 +1,6 @@
 {
   "name": "assay",
+  "displayName": "Assay",
   "description": "Assay, the elite AI GTM team on one living source of truth. Full parity with the Assay app: ground drafts in approved company facts, run collateral and AI-search work, check every claim before it ships, and propose governed truth changes that wait for your approval.",
   "version": "0.1.2",
   "author": {
@@ -8,5 +9,16 @@
   },
   "license": "MIT",
   "homepage": "https://assay.wiki/mcp/",
-  "repository": "https://github.com/Assay-Org/assay-truth-graph-mcp"
+  "repository": "https://github.com/Assay-Org/assay-truth-graph-mcp",
+  "logo": "assets/assay-icon-512.png",
+  "keywords": [
+    "gtm",
+    "marketing",
+    "sales enablement",
+    "seo",
+    "geo",
+    "brand",
+    "governance",
+    "truth graph"
+  ]
 }

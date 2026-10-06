@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "assay": {
+      "url": "https://app.assay.wiki/api/mcp/v2/mcp"
+    }
+  }
+}

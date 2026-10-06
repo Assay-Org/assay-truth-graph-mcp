@@ -9,7 +9,7 @@
   },
   "homepage": "https://assay.wiki/mcp/",
   "repository": "https://github.com/Assay-Org/assay-truth-graph-mcp",
-  "license": "Proprietary",
+  "license": "MIT",
   "keywords": [
     "mcp",
     "truth-graph",

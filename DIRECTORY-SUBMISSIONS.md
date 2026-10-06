@@ -41,6 +41,26 @@ Server config:
 }
 ```
 
+## Submission notes: the read/write split (2026-10-06)
+
+Reviewers (Claude directory, ChatGPT apps) look at tool hints, so the listed
+surface is split by effect:
+
+- `assay` is `readOnlyHint: true`, `openWorldHint: false`. Its only rows are
+  call telemetry. Always loaded in Claude Code.
+- `assay_act` is `readOnlyHint: false`, `destructiveHint: false`. Every action
+  previews first and executes only with a single-use plan token after the user
+  agrees; confirming context and lead preferences need a signed-in person
+  (OAuth), never an API key.
+- The existing tools keep their names and contracts. Workspaces can later get a
+  shorter tool list per seat (standard, editor, admin); a tool leaving a seat's
+  list keeps working for one release and says so in its response.
+- Rate limits: per credential before auth, and per workspace after auth (2,000
+  tool calls a minute in total, 600 per tool).
+
+Update the Glama listing and the Claude directory submission with this split and
+the README's front-door section in the same release that ships it.
+
 ## Stores
 
 | Store | Status | Notes |

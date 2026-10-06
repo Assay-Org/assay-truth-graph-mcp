@@ -3,7 +3,7 @@
   "name": "io.github.Assay-Org/assay-truth-graph",
   "title": "Assay Truth Graph MCP",
   "description": "Ranked, governed, cited GTM context for your agents, on one living source of truth.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://assay.wiki/mcp/",
   "repository": {
     "url": "https://github.com/Assay-Org/assay-truth-graph-mcp",
@@ -11,18 +11,18 @@
   },
   "icons": [
     {
-      "src": "https://assay.wiki/assay-brand-assets/png/assay-icon-dark-256x256.png",
+      "src": "https://raw.githubusercontent.com/Assay-Org/assay-truth-graph-mcp/main/assets/assay-icon-512.png",
       "mimeType": "image/png",
       "sizes": [
-        "256x256"
+        "512x512"
       ],
       "theme": "light"
     },
     {
-      "src": "https://assay.wiki/assay-brand-assets/png/assay-icon-light-256x256.png",
+      "src": "https://raw.githubusercontent.com/Assay-Org/assay-truth-graph-mcp/main/assets/assay-icon-512-on-dark.png",
       "mimeType": "image/png",
       "sizes": [
-        "256x256"
+        "512x512"
       ],
       "theme": "dark"
     }

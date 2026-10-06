@@ -8,10 +8,21 @@ context, and validation rules into a governed Truth Graph. The remote MCP server
 hands that context to Claude, ChatGPT, Cursor, Claude Code, Codex, and other MCP
 clients without copying company facts into each agent.
 
-The server has full parity with the Assay app. What the team does in the
-product, your agents can do here: 48 registered tools spanning Truth Graph
-search and governed mutation, content validation, collateral, AI search and
-GEO, readiness simulation, pre-call briefs, and review and promotion. Call
+Two tools are the front door, and most work needs nothing else:
+
+- `assay` (read-only): send the user's request and what you know (an account,
+  people's titles, the channel). You get what to lead with and whether a named
+  person approved it, the approved proof to cite, objections, claims to avoid,
+  what changed since last time, and what is missing with a link to fix it. It
+  also checks a draft before it ships, and answers questions about rivals.
+- `assay_act` (writes, always two-step): record what happened (an objection, a
+  deal outcome, a message that landed), keep a thread for an account or deal,
+  confirm who a situation is about, or have Assay draft something. Every action
+  previews first and runs only with the plan token after the person agrees.
+
+Behind them, the server has full parity with the Assay app: Truth Graph search
+and governed mutation, content validation, collateral, AI search and GEO,
+readiness simulation, pre-call briefs, and review and promotion. Call
 `tools/list` on the live endpoint for the current surface.
 
 ## Connect
@@ -58,6 +69,9 @@ Then install the `Assay Truth Graph` plugin from Codex Plugins.
 
 ## What Agents Can Do
 
+- Get a brief for a meeting, deal, launch or board conversation: what to lead
+  with for this audience, who approved it, and the proof to cite.
+- Prepare for several accounts in one call.
 - Get verified GTM context for customer-facing drafts.
 - Search the Truth Graph with provenance and caller-aware context shaping.
 - Validate draft content against approved facts and guardrails before it ships.
